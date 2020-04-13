@@ -7,7 +7,7 @@ import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'any' })
 export class ProvinceService {
- private heroesUrl = 'api/heroes';  // URL to web api 
+ private provincesByDateUrl = 'api/heroes';  // URL to web api 
 httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -16,7 +16,7 @@ httpOptions = {
   ) { }
 
   getProvincesByDate (): Observable<Province[]> {
-    return this.http.get<Province[]>(this.heroesUrl)
+    return this.http.get<Province[]>(this.provincesByDateUrl)
       .pipe(
         tap(_ => this.log('fetched provinces')),
         catchError(this.handleError<Province[]>('getProvincesByDate', []))

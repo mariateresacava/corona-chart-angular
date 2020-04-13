@@ -1,4 +1,4 @@
-export interface province {
+export interface Province {
    data: Date,
    litudine: number,
    longitudine: number,

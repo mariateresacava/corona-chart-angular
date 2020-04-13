@@ -1,5 +1,12 @@
 <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
-  <button>
+  <button mat-raised-button color='accent' (click)="getProvincesByDate()">
+  Get Provinces
+</button>
 </p>
+<div>
+  <button mat-icon-button color="warn" aria-label="love">
+    Rio <mat-icon>favorite</mat-icon>
+  </button>
+</div>
